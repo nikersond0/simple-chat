@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Чат</title>
-  <style>
+	<meta charset="utf-8">
+	<title>Чат</title>
+	<!-- Если вы ахуетьмегастилист, то знайте - стили не мои и вообще это опен соурс, делайте че хотите))) -->
+	<style>
 	body {
 		padding: 5px;
 	}
@@ -30,33 +32,31 @@
 	img {
 		width: 250px;
 	}
-  </style>
-  <script src="script_chat.js">
-
-  </script>
-
+	</style>
+	<script src="script_chat.js">
+	</script>
 </head>
 <body onload="chat();">
-<div class="main">
-  <h2>Chat</h2>
-  <div id="chat" class="chat" name="chat">
-  </div>
-  <br>
-  <table>
-    <tr>
-      <td>Nikname:</td>
-      <td><input type="text" name="name" id="name" placeholder="Enter a nikname"></td>
-    </tr>
-    <tr>
-      <td>Message:</td>
-      <td><input name="message" id="message" placeholder="Type a message"></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <input type="button" value="Отправить" onclick="addMessage();">
-      </td>
-    </tr>
-  </table>
-</div>
+	<div class="main">
+		<h2>Чат</h2>
+		<div id="chat" class="chat" name="chat"></div>
+		<br>
+		<table>
+			<tr>
+				<td>Имя:</td>
+				<td><input type="text" name="name" id="name" placeholder=""></td> <!-- плейсхолдер в обоих инпутах можно переделать, но мне лень) -->
+			</tr>
+			<tr>
+				<td>Сообщение:</td>
+				<td><input name="message" id="message" placeholder=""></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="Send!" onclick="addMessage();"> <!-- НИ В КОЕМ СЛУЧАЕ НЕ ДЕЛАЙТЕ textarea!
+						А то мамкин граматей, когда будет чатиться, нахуярит дохуилиард пробелов и чату придёт пизда... -->
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
