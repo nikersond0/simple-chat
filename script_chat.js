@@ -34,11 +34,11 @@
               messages = messages + "<p><b>" + array[i].name + ":</b> " + array[i].message + "</p>";
             }
             document.getElementById("chat").innerHTML = messages;
-            document.getElementById("chat").scrollTop = 1000000;
+            document.getElementById("chat").scrollTop = 1000000; //Эта чтоб автоматом доставляло к новым сообщениям
           }
         }
       }
-      setTimeout("chat()", 1000);
+      setTimeout("chat()", 1000); //Вот эта вся функция повторяется каждую секунду (йа капитайн ачевиднстъ!!!11!)
     }
     function addMessage () {
       	var xmlhttp = getXmlHttp();
@@ -47,5 +47,5 @@
       	xmlhttp.open("POST", "functions.php", true);
       	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
       	xmlhttp.send("name=" + encodeURIComponent(name) + "&message=" + encodeURIComponent(message));
-		alert('Message sent!')
+		alert('Message sent!') //Можете изменить текст алёрта
     } 
